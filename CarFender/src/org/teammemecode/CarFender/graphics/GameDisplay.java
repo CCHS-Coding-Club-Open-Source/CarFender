@@ -9,23 +9,26 @@ import javax.swing.JPanel;
 import org.teammemecode.CarFender.logic.Thing;
 
 public class GameDisplay extends JPanel {
-	ArrayList<Thing> things = new ArrayList<Thing>();
-	
+	private static ArrayList<Thing> things = new ArrayList<Thing>();
+
 	
 	public GameDisplay() {
 		
 	    this.repaint();
 	}
 	
+	public void updateThingsArraylist(ArrayList<Thing> newThing) {
+		things = newThing;
+	}
+	
 	public void paintComponent(Graphics g)
 	{
+		for(int i = 0; i < things.size(); i++) {
+			Thing thing = things.get(i);
+			Image a = thing.getImage(50);
+		    g.drawImage(a, thing.x, thing.y, null);
+		}
 		
-		Thing abc = new Thing("Car.png");
-	    // POSITION OF THE PICTURE
-	    int x = 0;
-	    int y = 0;
-	    Image a = abc.getImage(500);
-	    g.drawImage(a, x, y, null);
 	}
 
 }
