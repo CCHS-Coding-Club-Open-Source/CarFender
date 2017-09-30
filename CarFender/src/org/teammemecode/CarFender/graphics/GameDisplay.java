@@ -2,13 +2,16 @@ package org.teammemecode.CarFender.graphics;
 
 import java.awt.Graphics;
 import java.awt.Image;
-import java.io.File;
-import java.io.IOException;
+import java.util.ArrayList;
 
-import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+import org.teammemecode.CarFender.logic.Thing;
+
 public class GameDisplay extends JPanel {
+	ArrayList<Thing> things = new ArrayList<Thing>();
+	
+	
 	public GameDisplay() {
 		
 	    this.repaint();
@@ -17,18 +20,12 @@ public class GameDisplay extends JPanel {
 	public void paintComponent(Graphics g)
 	{
 		
-		Image img = null;
-		File input = new File("src/org/teammemecode/CarFender/resources/vision.png");
-	    try {
-			img = ImageIO.read(input);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		Thing abc = new Thing("Car.png");
 	    // POSITION OF THE PICTURE
-	    int x = 60;
-	    int y = 60;
-	    g.drawImage(img, x, y, null);
+	    int x = 0;
+	    int y = 0;
+	    Image a = abc.getImage(500);
+	    g.drawImage(a, x, y, null);
 	}
 
 }
