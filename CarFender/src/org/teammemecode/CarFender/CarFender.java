@@ -68,7 +68,7 @@ public class CarFender {
 		    }
 		};
 
-		timer.schedule(myTask, 0, 10);
+		timer.schedule(myTask, 0, 1);
 		
 		
 		
