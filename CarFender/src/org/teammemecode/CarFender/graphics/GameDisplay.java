@@ -1,5 +1,6 @@
 package org.teammemecode.CarFender.graphics;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.KeyEvent;
@@ -16,6 +17,8 @@ public class GameDisplay extends JPanel implements KeyListener {
 	
 	public GameDisplay(Thing car) {
 		this.car = car;
+		
+		this.setBackground(new Color(50, 100, 45));
 		
 	    this.repaint();
 	    addKeyListener(this);

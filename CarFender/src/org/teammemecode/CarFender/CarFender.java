@@ -21,12 +21,19 @@ public class CarFender {
 	public static void main(String[] args) {
 		System.out.println("Hello, World!");
 		
+		
+		
 		things.add(new Thing("heart.png"));
+		
+		for(int i = 0; i < 12; i++) things.add(new Thing("healthBar/frame-" + i + ".png"));
+		for(int i = 0; i < 1; i++) things.add(new Thing("wheel/frame-" + i + ".png"));
+		
+		
+		
 		car = new Thing("car.png");
 		
 		displayFrame = new JFrame();	
 		displayFrame.setLayout(new BorderLayout());
-		
 		
 		
 		gamePanel = new GameDisplay(car);	
@@ -45,7 +52,7 @@ public class CarFender {
 		    }
 		};
 
-		timer.schedule(myTask, 0, 200);
+		timer.schedule(myTask, 0, 10);
 		
 		
 		
