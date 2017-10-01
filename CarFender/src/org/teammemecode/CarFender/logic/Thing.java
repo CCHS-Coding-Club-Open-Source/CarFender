@@ -26,15 +26,11 @@ public class Thing {
 		//	return scaledImage;
 		//}
 		
-		System.out.println(img.getHeight(null));
-		System.out.println(img.getWidth(null));
-		
 		double initH = img.getHeight(null);
 		double initW = img.getWidth(null);
 		
 		double height = width * (initH / initW);
 		
-		System.out.println(width + " " + height);
 		
 		scaledImage = img.getScaledInstance(width, (int) height, Image.SCALE_FAST);
 		return scaledImage;

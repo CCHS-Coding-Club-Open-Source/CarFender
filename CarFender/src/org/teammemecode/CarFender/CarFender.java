@@ -15,20 +15,21 @@ public class CarFender {
 	public static JFrame displayFrame;
 	public static GameDisplay gamePanel;
 	static ArrayList<Thing> things = new ArrayList<Thing>();
+	static Thing car;
 
 
 	public static void main(String[] args) {
 		System.out.println("Hello, World!");
 		
-		Thing abc = new Thing("Car.png");
-		things.add(abc);
+		things.add(new Thing("heart.png"));
+		car = new Thing("car.png");
 		
 		displayFrame = new JFrame();	
 		displayFrame.setLayout(new BorderLayout());
 		
 		
 		
-		gamePanel = new GameDisplay();
+		gamePanel = new GameDisplay(car);	
 		
 		displayFrame.add(gamePanel);
 		
