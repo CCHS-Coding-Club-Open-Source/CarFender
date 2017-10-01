@@ -27,8 +27,24 @@ public class CarFender {
 		
 		for(int i = 0; i < 12; i++) things.add(new Thing("healthBar/frame-" + i + ".png"));
 		for(int i = 0; i < 1; i++) things.add(new Thing("wheel/frame-" + i + ".png"));
+		things.add(new Thing("monsters/BokTop_Mon.png"));
+		things.add(new Thing("monsters/LazTop_Mon.png"));
+		things.add(new Thing("monsters/MudSid_Mon.png"));
+		things.add(new Thing("monsters/MudTop_Mon.png"));
+		things.add(new Thing("monsters/SarSid_Mon.png"));
+		things.add(new Thing("monsters/SarTop_Mon.png"));
+		things.add(new Thing("monsters/SekSid_Mon.png"));
+		things.add(new Thing("monsters/SekTop_Mon.png"));
+		things.add(new Thing("monsters/SikTop_Mon.png"));
+		things.add(new Thing("monsters/TenGre_Mon.png"));
+		things.add(new Thing("monsters/TenSid_Mon.png"));
+		things.add(new Thing("monsters/Tib2Top_Mon.png"));
+		things.add(new Thing("monsters/Tib3Top_Mon.png"));
+		things.add(new Thing("monsters/TibTop_Mon.png"));
 		
-		
+		things.add(new Thing("tree/TREE.png"));
+		things.add(new Thing("tree/TREEDOS.png"));
+
 		
 		car = new Thing("car.png");
 		
