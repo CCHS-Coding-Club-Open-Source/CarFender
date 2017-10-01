@@ -9,6 +9,7 @@ import javax.imageio.ImageIO;
 public class Thing {
 	private Image img;
 	private Image scaledImage;
+	public int x,y;
 	
 	public Thing(String filePath) {
 		File input = new File("src/org/teammemecode/CarFender/resources/" + filePath);
@@ -25,18 +26,20 @@ public class Thing {
 		//	return scaledImage;
 		//}
 		
-		System.out.println(img.getHeight(null));
-		System.out.println(img.getWidth(null));
-		
 		double initH = img.getHeight(null);
 		double initW = img.getWidth(null);
 		
 		double height = width * (initH / initW);
 		
-		System.out.println(width + " " + height);
 		
 		scaledImage = img.getScaledInstance(width, (int) height, Image.SCALE_FAST);
 		return scaledImage;
 	}
+	
+	public void setPos(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
 
 }

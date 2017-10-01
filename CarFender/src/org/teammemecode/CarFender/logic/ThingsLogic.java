@@ -11,7 +11,10 @@ public class ThingsLogic {
 	
 	
 	public void tick(ArrayList<Thing> thingsToTick) {
-		
+		for(int i = 0; i < thingsToTick.size(); i++) {
+			Thing thingToTick = thingsToTick.get(i);
+			thingToTick.setPos(thingToTick.x + 2, thingToTick.y + 1);
+		}
 	}
 
 }
